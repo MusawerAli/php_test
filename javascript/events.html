@@ -1,0 +1,17 @@
+<button onclick="document.getElementById('demo').innerHTML=Date()">Click</button>
+
+<p id="demo"></p>
+
+<h1>Using by this</h1>
+
+<button onclick="this.innerHTML=Date()">Click </button>
+<input type="text" id="demo">
+
+<button onclick="dateFunction()">Date</button>
+
+<script>
+	
+	function dateFunction(){
+		document.getElementById("demo").innerHTML=Date();
+	}
+</script>

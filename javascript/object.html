@@ -1,0 +1,27 @@
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script >
+	var person = {firstName:"JohnDoe",LastName:" Od",age:30}
+
+	var car = {
+		name:"Fiat",
+		color:"red",
+		transmission:"auto"
+	};
+
+	document.getElementById("demo2").innerHTML = car.name;
+
+	document.getElementById("demo").innerHTML = person.firstName + "is " + person.age;
+
+	//function for object
+	function car_object(name,trans,color){
+		var car = {
+			name:name,
+			trans:trans,
+			color:color,
+		};
+		return car;
+	}
+document.getElementById("demo3").innerHTML = car_object("ford","manual","red").name;
+</script>
