@@ -1,7 +1,56 @@
 <p id="demo"></p>
-
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<input name="cars" id="cars">
+<button onclick="addarray()">Add</button>
+<p id="items"></p>
+<input  name="items" id="item_">
+<button onclick="add_item()">Add item</button>
 <script>
 	var car = ["Volvo","sbaro","BMW"];
 
 	document.getElementById("demo").innerHTML = car[1];
+
+	//access last element of array
+	var last = car[car.length-1];
+	document.getElementById("demo2").innerHTML = last
+
+//loop through an array
+
+var fruits,text,flenth,i;
+fruits = ['Apple','Mango','Banana','Orange'];
+flength = fruits.length;
+text = "";
+
+for(i=0; i<flength;i++){
+	text+= "<li>" + fruits[i] + "</li>";
+}
+
+document.getElementById("demo3").innerHTML = text;
+// adding an array
+var cars = ["Volvo","sbaro","BMW"];
+document.getElementById("demo4").innerHTML = cars;
+function addarray(){
+	var c = document.getElementById("cars").value;
+	cars.push(c);
+	document.getElementById("demo4").innerHTML = cars;
+
+}
+
+
+
+// adding by length 
+
+var items = ['Pane','Knife','Steel'];
+document.getElementById("items").innerHTML = items;
+
+
+function add_item(){
+ var newitem = document.getElementById("item_").value;
+	 
+	items[items.length]=newitem;
+document.getElementById("items").innerHTML = items;
+}
+
 </script>

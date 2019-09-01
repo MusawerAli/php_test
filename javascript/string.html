@@ -1,9 +1,20 @@
 <p id="demo"></p>
 
+Find Length <p id="demo2"></p>
+<p id="demo3"></p>
 <script>
 	var ans1 = "it is right";
 	var ans2  = 'IT is not right';
 	document.getElementById("demo").innerHTML = ans1 + 
 	"<br>" + 
 	ans2;
+
+	var txt = "KARACHI";
+	var fl = txt.length;
+	document.getElementById("demo2").innerHTML = fl;
+
+	//Escape Sequence
+	var x = "We lIve in  \"txt\" city of Paksitan";
+	document.getElementById("demo3").innerHTML = x;
 </script>
+

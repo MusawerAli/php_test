@@ -1,0 +1,26 @@
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3">Please Visit Microsoft Microsoft</p>
+<p id="demo4">Please visit Microsoft , Microsoft</p>
+<button onclick="rplcFunction()">click</button>
+<button onclick="rplcIntensice()">Rplace Intensice</button>
+<script>
+	var str = "Please locate where 'locate' occur";
+	var pos = str.lastIndexOf("locate",);
+	var pos2 = str.indexOf("locate");
+	document.getElementById("demo").innerHTML =pos;
+	document.getElementById("demo2").innerHTML =pos2;
+
+	function rplcFunction(){
+		var getText = document.getElementById("demo3").innerHTML;
+		var changeTxt = getText.replace("Microsoft","W3school");
+		document.getElementById("demo3").innerHTML = changeTxt;
+	}
+
+	function rplcIntensice(){
+		var str = document.getElementById("demo4").innerHTML;
+		var changeTxt = str.replace(/Microsoft/g , "W3School");
+		document.getElementById("demo4").innerHTML = changeTxt;
+
+	}
+</script>
