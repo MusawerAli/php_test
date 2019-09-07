@@ -1,0 +1,23 @@
+
+<button onclick="sort_asc()">Sort Assecnding</button>
+
+<button onclick="sort_desc()">Sort Deecnding</button>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+	
+	var points = [40, 100, 1, 1,5, 25, 10];
+document.getElementById("demo").innerHTML = points;  
+
+	function sort_asc(){
+		points.sort(function(a,b){return a-b});
+		document.getElementById("demo1").innerHTML = points;
+	}
+
+	function sort_desc(){
+		points.sort(function(a,b){return b-a});
+		document.getElementById("demo2").innerHTML=points;
+	}
+</script>

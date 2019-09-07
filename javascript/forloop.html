@@ -1,0 +1,24 @@
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+	
+	var cars = ["BMW","lEXUS","Mercedes"];
+
+	var text = "";
+	var i ;
+	for (i=0;i<cars.length;i++){
+		text+= cars[i]+"<br>";
+	}
+
+	document.getElementById("demo").innerHTML = text;
+
+	var x = "";
+	var y = 2;
+	var z = cars.length;
+
+	for(;y<z;y++){
+		x +=cars[y] + "<br>";
+	}
+	document.getElementById("demo2").innerHTML=x;
+</script>

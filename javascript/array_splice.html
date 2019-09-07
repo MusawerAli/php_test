@@ -1,0 +1,23 @@
+<p id="demo"></p>
+<button onclick="myfunction()">Click </button>
+<button onclick="addArray()">Add</button>
+	
+</div>
+<script>
+	
+	var fruits = ['Banana','Mangeo','Orange'];
+
+	document.getElementById("demo").innerHTML = "Orignal Array" + fruits;
+
+	function myfunction(){
+		fruits.splice(2, 1);
+		document.getElementById('demo').innerHTML = fruits;
+	}
+
+	function addArray(){
+		fruits.splice(2, 0, [
+			'data','da'
+			]);
+		document.getElementById('demo').innerHTML = fruits;
+	}
+</script>
