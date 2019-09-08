@@ -10,14 +10,15 @@ include('db_conn.php');
         <meta name="description" content="">
         <meta name="author" content="">
         <title>Product filter in php</title>
+        
+        
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
         <!-- Custom CSS -->
         
     </head>
@@ -113,7 +114,7 @@ include('db_conn.php');
                 {
 
                     text-align: center;
-                    background: url('assets/img/loader.gif') no-repeat center;
+                    background: url('assets/img/loader1.gif') no-repeat center;
                     height: 150px;
                 }   
             </style>
@@ -153,6 +154,27 @@ include('db_conn.php');
                 return filter;
 
               }
+         
+
+$('.common_selector').click(function(){
+    filter_data();
+});
+
+ $('#price_range').slider({
+        range:true,
+        min:1000,
+        max:65000,
+        values:[1000, 65000],
+        step:500,
+        stop:function(event, ui)
+        {
+            $('#price_show').html(ui.values[0] + ' - ' + ui.values[1]);
+            $('#hidden_minimum_price').val(ui.values[0]);
+            $('#hidden_maximum_price').val(ui.values[1]);
+            filter_data();
+        }
+    });
+
 });
             </script>
         </body>
